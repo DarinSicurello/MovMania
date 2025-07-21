@@ -1,8 +1,20 @@
 {
   "name": "moviemania",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "homepage": "https://github.com/DarinSicurello/MovMania#readme",
+  "bugs": {
+    "url": "https://github.com/DarinSicurello/MovMania/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarinSicurello/MovMania.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,8 +22,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "bootstrap": "^5.3.3",
+    "react": "18.2",
+    "react-dom": "18.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
