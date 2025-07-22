@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.tsx
+import React from 'react';
+import './styles.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    // Main wrapper div
+    <div className="page-wrapper">
+      <header>
+        <h1>Vite + React + TS Website App 2.0</h1>
+        <h3>Learning FrontEnd Coding in 2025</h3>
+        <h5>Front End Software Developer March-31st-2025</h5>
+        <h5>Darin Sicurello darin.sicurello@gmail.com</h5>
+      </header>
 
-export default App
+      <div className="main-con">
+        <div className="left-section">
+          <h2>My List Machine</h2>
+          {/* Input for new item */}
+          <label htmlFor="user-input">New Item:</label>
+          <input type="text" id="user-input" name="user-input" placeholder="Apples.." />
+          <button>Submit New Item</button>
+        </div>
+
+        <div className="right-section">
+          <h2>My App</h2>
+          <div className="item-container">
+            <div className="item-box">Item 1</div>
+            <div className="item-box">Item 2</div>
+            <div className="item-box">Item 3</div>
+            <div className="item-box">Item 4</div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        Darin Sicurello @2025
+      </footer>
+    </div>
+  );
+};
+
+export default App;
