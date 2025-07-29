@@ -21,32 +21,49 @@ const MovieDatabase: React.FC = () => {
       .catch(err => console.error('Failed to fetch movies:', err));
   }, []);
 
-  // Add a new film
-  const handleAddMovie = (): void => {
-  logDebug('Trying to add movie:', newTitle);  // Debug
+// Add a new film
+const handleAddMovie = (): void => {
+  // Debug log: Trying to add a new movie
+  logDebug('Trying to add movie', newTitle, 'info');
 
+  // Check if title is empty
   if (newTitle.trim() === '') {
-    logDebug('New title is empty, ignoring add.');
+    logDebug('New title is empty, ignoring add.', undefined, 'warn');
     return;
   }
 
+  // New movie object to send to API
   const newMovie = { title: newTitle };
 
+  // POST request to add movie
   fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newMovie),
   })
     .then(res => {
-      logDebug('POST response status:', res.status);
+      // Log status code response
+      if (res.status === 201) {
+        logDebug('POST response status: 201 (Created)', undefined, 'success');
+      } else {
+        logDebug(`Unexpected POST response status: ${res.status}`, undefined, 'warn');
+      }
       return res.json();
     })
     .then(createdMovie => {
-      logDebug('Movie added:', createdMovie);
+      // Log the newly added movie
+      logDebug('Movie added to database', createdMovie, 'success');
+
+      // Update movie list with new movie
       setMovies(prev => [...prev, createdMovie]);
+
+      // Clear input field
       setNewTitle('');
     })
-    .catch(err => console.error('Failed to add movie:', err));
+    .catch(err => {
+      // Log any errors during the add process
+      logDebug('Failed to add movie', err, 'error');
+    });
 };
   // Delete film
   const handleDelete = (id: number): void => {

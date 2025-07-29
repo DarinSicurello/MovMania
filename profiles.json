@@ -1,0 +1,40 @@
+{
+  "profiles": [
+    {
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "title": "Frontend Developer",
+      "titleDescription": "Building clean, user-friendly interfaces with React.",
+      "bio": "Jane is a software engineer with 5+ years experience...",
+      "avatarUrl": "https://akns-images.eonline.com/eol_images/Entire_Site/20161127/rs_600x600-161227105154-600-carrie-fisher-princess-leia.jpg?fit=around%7C1080:1080&output-quality=90&crop=1080:1080;center,top",
+      "id": "1"
+    },
+    {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "title": "Backend Developer",
+      "titleDescription": "Specializes in scalable APIs and database design.",
+      "bio": "John is an expert in Node.js and cloud architecture...",
+      "avatarUrl": "https://i.guim.co.uk/img/media/3237b8d82452ddf4e0330a04d65123c89df2ea3e/0_3027_5404_3243/master/5404.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=947307d06c59914c88bb9b53bd7506c8",
+      "id": "2"
+    },
+    {
+      "id": "ae2d",
+      "name": "Darin Sicurello",
+      "email": "darin.sicurello@gmail.com",
+      "title": "sss",
+      "titleDescription": "ss",
+      "bio": "ss",
+      "avatarUrl": "https://www.myany.city/sites/default/files/styles/scaled_cropped_medium__260x260/public/field/image/node-related-images/sample-dwight-k-schrute.jpg?itok=8TfRscbA"
+    },
+    {
+      "id": "db2b",
+      "name": "JOhn Doe",
+      "email": "jondoe@aol.com",
+      "title": "Supervisors",
+      "titleDescription": "Does Nothing ",
+      "bio": "Nothing ",
+      "avatarUrl": "https://www.cheatsheet.com/wp-content/uploads/2020/08/George-Costanza-scaled.jpg"
+    }
+  ]
+}
