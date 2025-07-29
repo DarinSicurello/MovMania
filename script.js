@@ -16,4 +16,12 @@ key does not count for this, you need to come up with your own prop and practice
 
 No red errors/warnings in the console in the browser
 
-No type errors in VS Code */
+No type errors in VS Code 
+
+Using an online API of your choice, create a React project.
+Project must meet the following criteria:
+Use React Router and have at least 3 pages using React Bootstrap or an alternative styling library
+Contain at least 10 custom components
+Allow for all CRUD operations via one or more APIs
+
+*/

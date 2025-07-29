@@ -1,13 +1,15 @@
-// App.tsx
+// Home.tsx
 import React from 'react';
-import './styles.css';
+//import './styles.css';
+import Navbar from './NavBar'; 
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
   return (
-    // Main wrapper div
+    <div>
+      <Navbar />
     <div className="page-wrapper">
       <header>
-        <h1>Vite + React + TS Website App 2.0</h1>
+        <h1>Home Page for Vite + React + TS Website App 2.0</h1>
         <h3>Learning FrontEnd Coding in 2025</h3>
         <h5>Front End Software Developer March-31st-2025</h5>
         <h5>Darin Sicurello darin.sicurello@gmail.com</h5>
@@ -16,7 +18,6 @@ const App: React.FC = () => {
       <div className="main-con">
         <div className="left-section">
           <h2>My List Machine</h2>
-          {/* Input for new item */}
           <label htmlFor="user-input">New Item:</label>
           <input type="text" id="user-input" name="user-input" placeholder="Apples.." />
           <button>Submit New Item</button>
@@ -37,7 +38,10 @@ const App: React.FC = () => {
         Darin Sicurello @2025
       </footer>
     </div>
+  </div>
   );
 };
 
-export default App;
+export default Home;
+
+
