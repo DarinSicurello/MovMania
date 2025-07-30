@@ -1,19 +1,15 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; 
 import { useEffect, useState } from 'react';
-import './ProfileDetail.css'; // css file. temporary
+import './ProfileDetail.css';
 
 export default function ProfileDetail() {
-  // Get profileId from URL parameters
   const { profileId } = useParams<{ profileId: string }>();
-
-  // Profile user data 
   const [user, setUser] = useState<any>(null);
 
-  // Fetch profile from server by ID
   useEffect(() => {
     if (!profileId) return;
 
-    fetch(`http://localhost:3001/profiles/${profileId}`)
+    fetch(`http://localhost:3002/profiles/${profileId}`) // <-- changed port to 3002
       .then(res => {
         if (!res.ok) {
           throw new Error('Profile not found');
@@ -34,7 +30,6 @@ export default function ProfileDetail() {
       .toUpperCase();
   };
 
-  // Profile detail page Container
   if (!user) {
     return <p>Loading profile...</p>;
   }
@@ -49,7 +44,6 @@ export default function ProfileDetail() {
         )}
       </div>
 
-      {/* Replaced "Profile Detail Page" with Name */}
       <h2>{user.name}</h2>
 
       <p>Viewing profile with ID: {profileId}</p>

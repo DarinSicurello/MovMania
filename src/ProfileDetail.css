@@ -28,3 +28,23 @@
   color: #555;
   font-weight: bold;
 }
+.profiles-page-wrapper {
+  padding: 20px;
+}
+
+.main-con {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Ensure left and right sections layout well */
+.left-section {
+  width: 250px;
+  min-width: 200px;
+}
+
+.right-section {
+  flex-grow: 1;
+  min-width: 0; /* Important to prevent overflow */
+}

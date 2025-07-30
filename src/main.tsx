@@ -1,36 +1,33 @@
-
 import React from 'react';
-import ReactDOM from 'react-dom/client'; 
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
-import Home from './Home';              
-import ProfilesPage from './ProfilesPage'; 
+// Import pages
+import Home from './Home';
+import ProfilesPage from './ProfilesPage';
 import ErrorPage from './ErrorPage';
-import ProfileDetail from './ProfileDetail'; 
-import Layout from './Layout'
+import ProfileDetail from './ProfileDetail';
+import Layout from './Layout';
 import MovieDatabase from './MovieDatabase';
+import MovieGenerator from './MovieGenerator';
+import About from './About';
+import Links from './Links';
+import Contact from './Contact';
 
-// Add Layout to all the pages.
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />, 
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
+      { index: true, element: <Home /> },
+      { path: 'movies', element: <MovieDatabase /> },
+      { path: 'generator', element: <MovieGenerator /> },
       {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: '/movies',
-        element: <MovieDatabase />,
-      },
-      {
-        path: 'Profilespage',
+        path: 'profiles',
         element: <ProfilesPage />,
         children: [
           {
@@ -39,14 +36,15 @@ const router = createBrowserRouter([
           },
         ],
       },
+      { path: 'about', element: <About /> },
+      { path: 'links', element: <Links /> },
+      { path: 'contact', element: <Contact /> },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />                   
-    
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-

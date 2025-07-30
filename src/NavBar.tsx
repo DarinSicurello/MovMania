@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+// Navbar from Bootstrap for main.tsx (formerly index)
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
@@ -23,10 +24,22 @@ export default function Navbar() {
             <Link className="nav-link" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Profilespage">Profiles</Link>
+            <Link className="nav-link" to="/profiles">Profiles</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Movies">Movie Database</Link>
+            <Link className="nav-link" to="/movies">Movie Database</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/generator">Movie Generator</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/links">Links</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

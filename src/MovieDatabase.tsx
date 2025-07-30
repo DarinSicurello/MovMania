@@ -6,14 +6,15 @@ interface Movie {
   id: number;
   title: string;
 }
-// my local Json API location
+
+// My local JSON API location
 const API_URL = 'http://localhost:3001/movies';
 
 const MovieDatabase: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [newTitle, setNewTitle] = useState<string>('');
 
-  // Fetch movies from API on mount 
+  // Fetch movies from API on mount
   useEffect(() => {
     fetch(API_URL)
       .then(res => res.json())
@@ -21,50 +22,40 @@ const MovieDatabase: React.FC = () => {
       .catch(err => console.error('Failed to fetch movies:', err));
   }, []);
 
-// Add a new film
-const handleAddMovie = (): void => {
-  // Debug log: Trying to add a new movie
-  logDebug('Trying to add movie', newTitle, 'info');
+  // Add a new film
+  const handleAddMovie = (): void => {
+    logDebug('Trying to add movie', newTitle, 'info');
 
-  // Check if title is empty
-  if (newTitle.trim() === '') {
-    logDebug('New title is empty, ignoring add.', undefined, 'warn');
-    return;
-  }
+    if (newTitle.trim() === '') {
+      logDebug('New title is empty, ignoring add.', undefined, 'warn');
+      return;
+    }
 
-  // New movie object to send to API
-  const newMovie = { title: newTitle };
+    const newMovie = { title: newTitle };
 
-  // POST request to add movie
-  fetch(API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(newMovie),
-  })
-    .then(res => {
-      // Log status code response
-      if (res.status === 201) {
-        logDebug('POST response status: 201 (Created)', undefined, 'success');
-      } else {
-        logDebug(`Unexpected POST response status: ${res.status}`, undefined, 'warn');
-      }
-      return res.json();
+    fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newMovie),
     })
-    .then(createdMovie => {
-      // Log the newly added movie
-      logDebug('Movie added to database', createdMovie, 'success');
+      .then(res => {
+        if (res.status === 201) {
+          logDebug('POST response status: 201 (Created)', undefined, 'success');
+        } else {
+          logDebug(`Unexpected POST response status: ${res.status}`, undefined, 'warn');
+        }
+        return res.json();
+      })
+      .then(createdMovie => {
+        logDebug('Movie added to database', createdMovie, 'success');
+        setMovies(prev => [...prev, createdMovie]);
+        setNewTitle('');
+      })
+      .catch(err => {
+        logDebug('Failed to add movie', err, 'error');
+      });
+  };
 
-      // Update movie list with new movie
-      setMovies(prev => [...prev, createdMovie]);
-
-      // Clear input field
-      setNewTitle('');
-    })
-    .catch(err => {
-      // Log any errors during the add process
-      logDebug('Failed to add movie', err, 'error');
-    });
-};
   // Delete film
   const handleDelete = (id: number): void => {
     fetch(`${API_URL}/${id}`, {
@@ -74,6 +65,20 @@ const handleAddMovie = (): void => {
         setMovies(prev => prev.filter(movie => movie.id !== id));
       })
       .catch(err => console.error('Failed to delete movie:', err));
+  };
+
+  // Download all movies as JSON
+  const handleDownloadMovies = (): void => {
+    const dataStr = JSON.stringify(movies, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'movies-database.json';
+    a.click();
+
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -96,6 +101,9 @@ const handleAddMovie = (): void => {
 
       <div className="right-section">
         <h2>My Movies</h2>
+        <button className="btn btn-outline-secondary mb-3" onClick={handleDownloadMovies}>
+          Download Movies JSON
+        </button>
         <div className="item-container">
           {movies.map((movie) => (
             <div
