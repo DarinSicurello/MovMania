@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+<div className="container mt-4">
+    <h1>About This Site</h1>
+    <h4>Created with Vite + React + TypeScript</h4>
+    <h5>Front End Software Developer — March 31st, 2025</h5>
+    <h5>
+      Darin Sicurello —{' '}
+      <a href="mailto:darin.sicurello@gmail.com">darin.sicurello@gmail.com</a>
+    </h5>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    <h3 className="mt-4">Custom Components</h3>
+    <ul>
+      <li>About.tsx</li>
+      <li>Contact.tsx (with your contact form)</li>
+      <li>ErrorPage.tsx</li>
+      <li>Home.tsx</li>
+      <li>Layout.tsx</li>
+      <li>Links.tsx</li>
+      <li>MovieDatabase.tsx</li>
+      <li>MovieGenerator.tsx</li>
+      <li>MovieReview.tsx</li>
+      <li>NavBar.tsx</li>
+      <li>ProfileDetail.tsx</li>
+      <li>ProfilesPage.tsx</li>
+    </ul>
+    <ul>
+      <h2>Online API with React</h2>
+      <li>MovieGenerator.tsx — fetches random movies from OMDb</li>
+      <li>MovieDatabase.tsx — (assumed to fetch or search movie data)</li>
+      <li>MovieReview.tsx — user-generated content (saved locally or extended API in future)</li>
+      <li>NewMovie.tsx — generates 5 posters with random keywords via OMDb</li>
+    </ul>
+      <h3>(CRUD) operations using React Router’s</h3>
+      <p>ProfilesPage is a solid and well-structured component implementing 
+        profile CRUD, routing, and form management with TypeScript types.</p>
+        <li>Supports Create, Edit, Delete profile with API calls.</li>
+        <li>Avatar rendering logic (within ProfileDetail and ProfilesPage)</li>
+      <br>
+      
+      
+      
+      
+      
+      
+      
+      </br>
+  </div>
