@@ -1,7 +1,8 @@
 About This Site
 
 For React Router please use http://localhost:3001/movies.json and http://localhost:3002/profiles.json
-
+In BASH json-server --watch movies.json -p 3001
+In BASh json-server --watch profiles.json -p 3002
 Created with Vite + React + TypeScript
 Front End Software Developer — March 31st, 2025
 Darin Sicurello — darin.sicurello@gmail.com
