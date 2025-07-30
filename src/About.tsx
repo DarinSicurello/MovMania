@@ -4,6 +4,10 @@ export default function About() {
   return (
   <div className="container mt-4">
     <h1>About This Site</h1>
+    <h1>For React Router please use
+        http://localhost:3001/movies
+        http://localhost:3002/profiles  
+    </h1>
     <h4>Created with Vite + React + TypeScript</h4>
     <h5>Front End Software Developer — March 31st, 2025</h5>
     <h5>
@@ -37,7 +41,7 @@ export default function About() {
       <p>ProfilesPage is a solid and well-structured component implementing 
         profile CRUD, routing, and form management with TypeScript types.</p>
         <li>Supports Create, Edit, Delete profile with API calls.</li>
-      <li>Avatar rendering logic (within ProfileDetail and ProfilesPage)</li>
+        <li>Avatar rendering logic (within ProfileDetail and ProfilesPage)</li>
       <br>
       
       
