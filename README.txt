@@ -1,8 +1,6 @@
 About This Site
 
-For React Router please use
-http://localhost:3001/movies
-http://localhost:3002/profiles
+For React Router please use http://localhost:3001/movies.json and http://localhost:3002/profiles.json
 
 Created with Vite + React + TypeScript
 Front End Software Developer — March 31st, 2025
