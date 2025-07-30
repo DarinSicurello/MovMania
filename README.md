@@ -5,6 +5,8 @@
     <h1> For React Router please use
          http://localhost:3001/movies.json
          http://localhost:3002/profiles.json</h1>
+    <h2>In BASH json-server --watch movies.json -p 3001</h2>
+    <h2>In BASh json-server --watch profiles.json -p 3002</h2>
     <h5>
       Darin Sicurello —{' '}
       <a href="mailto:darin.sicurello@gmail.com">darin.sicurello@gmail.com</a>
