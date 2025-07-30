@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-// Import pages
+// Import pages use REACT
 import Home from './Home';
 import ProfilesPage from './ProfilesPage';
 import ErrorPage from './ErrorPage';

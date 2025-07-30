@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import ListMachine from './Listmachine'; // make sure the path is correct
+import MovieReview from './MovieReview';// make sure the path is correct
 
 
 const Home: React.FC = () => {
@@ -8,13 +8,10 @@ const Home: React.FC = () => {
     <div>
     <div className="page-wrapper">
       <header>
-        <h1>Home Page for Vite + React + TS Website App 2.0</h1>
-        <h3>Learning FrontEnd Coding in 2025</h3>
-        <h5>Front End Software Developer March-31st-2025</h5>
-        <h5>Darin Sicurello darin.sicurello@gmail.com</h5>
+        
       </header>
 
-      <ListMachine />
+      <MovieReview />
 
       <footer>
         Darin Sicurello @2025

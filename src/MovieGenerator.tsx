@@ -29,8 +29,21 @@ export default function MovieGenerator() {
 
   const curatedKeywords = [ /* ... your full keyword list remains unchanged ... */ 
     'star', 'love', 'war', 'dark', 'life', 'ghost', 'night', 'hero',
-    // ... [truncated for brevity] ...
-    'vortex', 'sanctuary', 'clash', 'ascend', 'fate', 'relic', 'spire', 'echoes'
+  'vortex', 'sanctuary', 'clash', 'ascend', 'fate', 'relic', 'spire', 'echoes',
+  'legend', 'shadow', 'hunt', 'dream', 'fire', 'ice', 'lost', 'found', 'storm',
+  'code', 'zero', 'blade', 'matrix', 'king', 'queen', 'throne', 'empire',
+  'cyber', 'alien', 'robot', 'return', 'mission', 'danger', 'blood', 'maze',
+  'escape', 'revenge', 'time', 'future', 'past', 'signal', 'abyss', 'edge',
+  'rift', 'hollow', 'curse', 'justice', 'infinite', 'rise', 'fall', 'blade',
+  'phantom', 'dragon', 'nova', 'pulse', 'rift', 'shadow', 'storm', 'terra',
+  'chaos', 'myth', 'quest', 'realm', 'saga', 'titan', 'valor', 'wrath', 'zenith',
+  'alchemy', 'beyond', 'celestial', 'dawn', 'ember', 'fury', 'glory', 'harvest',
+  'iceberg', 'jungle', 'kingdom', 'labyrinth', 'monsoon', 'nebula', 'oracle',
+  'paradox', 'quasar', 'radiance', 'spectrum', 'tempest', 'unseen', 'voyage',
+  'whisper', 'zenith', 'red', 'blue', 'green', 'black', 'white', 'yellow', 'purple',
+  'orange', 'silver', 'gold','one', 'two', 'three', 'four', 'five', 'six', 'seven',
+  'eight', 'nine', 'ten','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
+   'sunday'
   ];
 
   const fetchMovie = async () => {
