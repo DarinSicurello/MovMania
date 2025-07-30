@@ -2,6 +2,9 @@
     <h1>About This Site</h1>
     <h4>Created with Vite + React + TypeScript</h4>
     <h5>Front End Software Developer — March 31st, 2025</h5>
+    <h1> For React Router please use
+         http://localhost:3001/movies
+         http://localhost:3002/profiles</h1>
     <h5>
       Darin Sicurello —{' '}
       <a href="mailto:darin.sicurello@gmail.com">darin.sicurello@gmail.com</a>
